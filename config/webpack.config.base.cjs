@@ -20,13 +20,14 @@ const webpackConfig = {
     axios: 'axios',
     'axios-userscript-adapter': 'axiosGmxhrAdapter'
   },
+  stats: {
+    chunks: false,
+  },
   module: {
     rules: [
       {
-        use: {
-          loader: 'babel-loader',
-        },
         test: /\.js$/,
+        loader: 'babel-loader',
       },
       {
         test: /\.ts$/,

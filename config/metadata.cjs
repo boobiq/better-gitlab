@@ -7,8 +7,10 @@ module.exports = {
   author: author,
   source: repository.url,
   // 'license': 'MIT',
-  match: [
-    'http://www.example.com/*'
+  include: [
+    'http://www.dsl.sk/*',
+    'https://www.sme.sk/*',
+    'https://www.develhell.com/*'
   ],
   require: [
     `https://cdn.jsdelivr.net/npm/jquery@${dependencies.jquery}/dist/jquery.min.js`,
@@ -16,7 +18,8 @@ module.exports = {
     `https://cdn.jsdelivr.net/npm/axios-userscript-adapter@${dependencies['axios-userscript-adapter']}/dist/axiosGmxhrAdapter.min.js`,
   ],
   grant: [
-    'GM.xmlHttpRequest'
+    'GM.xmlHttpRequest',
+    'GM.notification',
   ],
   connect: [
     'httpbin.org'

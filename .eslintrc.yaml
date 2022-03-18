@@ -11,6 +11,10 @@ plugins:
   - standard
   - '@typescript-eslint'
 
+env:
+  browser: true
+  greasemonkey: true
+
 parser: '@typescript-eslint/parser'
 
 parserOptions:
@@ -18,6 +22,7 @@ parserOptions:
   ecmaVersion: 6
 
 rules:
+  no-undef: off
   comma-dangle: off
   "import/order": "error"
   "no-unused-vars": "off"
